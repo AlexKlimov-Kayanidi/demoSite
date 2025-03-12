@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт-визитка Александр Климов-Каяниди</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .photo {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+
+        .description {
+            flex: 1;
+            line-height: 1.6;
+        }
+
+        .description ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .description li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .description li:before {
+            content: "-";
+            position: absolute;
+            left: 0;
+            color: #e74c3c;
+        }
+
+        .player {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .photo {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>САЙТ-ВИЗИТКА АЛЕКСАНДРА КЛИМОВА-КАЯНИДИ</h1>
+        <p>Сделано с помощью искусственного интеллекта</p>
+    </header>
+
+    <div class="container">
+        <img src="C:/Users/user/Desktop/Резюме/Счастье в деятельности/97 (2).jpg" alt="Фото Александра" class="photo">
+        <div class="description">
+            <ul>
+                <li>ХРАНИТЕЛЬ ПЕРЕМЕН И ОПЕРАЦИОННОГО СПОКОЙСТВИЯ</li>
+                <li>ЛАУРЕАТ ПРЕМИИ ДИРЕКТОР ПО СЧАСТЬЮ 2022 г.</li>
+                <li>АВТОР ТЕРАПЕВТИЧЕСКИХ СКАЗОК ДЛЯ ВЗРОСЛЫХ</li>
+				<li>ВЛАДЕЮ НАВЫКАМИ И КОМПЕТЕНЦИЯМИ КОУЧА</li>
+                <li>2 ДАН КЕНДО, 4 КЮ ИАЙДО, 5 КЮ АЙКИДО</li>
+				<li>АКТИВНЫЙ ПОЛЬЗОВАТЕЛЬ ИИ</li>
+                <li>ИНСТРУКТОР ЦИГУН</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="player">
+        <h3>ГИМН КОМПАНИИ "СЧАСТЬЕ В ДЕЯТЕЛЬНОСТИ"</h3>
+        <p>Сгенерировано с помощью искусственного интеллекта</p>
+        <audio controls>
+            <source src="C:/Users/user/Desktop/Резюме/Счастье в деятельности/Гимн компании Счастье в деятельности (1).mp3" type="audio/mpeg">
+            Ваш браузер не поддерживает аудио элемент.
+        </audio>
+    </div>
+
+    <script>
+        // Можно добавить интерактивность при необходимости
+        document.addEventListener('DOMContentLoaded', () => {
+            const listItems = document.querySelectorAll('.description li');
+            listItems.forEach(item => {
+                item.addEventListener('mouseover', () => {
+                    item.style.transform = 'translateX(10px)';
+                    item.style.transition = 'transform 0.3s ease';
+                });
+                item.addEventListener('mouseout', () => {
+                    item.style.transform = 'translateX(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
